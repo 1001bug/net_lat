@@ -1,4 +1,4 @@
-# Measure network tatancy
+# Measure network letancy
 For 10Gb+ LAN on Linux and Windows (+Cygwin)
 - unicast send cost
 - multicast send const
@@ -8,10 +8,10 @@ For 10Gb+ LAN on Linux and Windows (+Cygwin)
 - TCP and UDP
 
 # What to expect
-User-space -> kernel -> card about 5usec
-Good CISCO 10G ETHERNET VLAN switch from card port to card port about 5-6usec
-card -> Kernel -> user-space on other side same 5usec
-So good UDP ping-pong is about 30usec
+User-space -> kernel -> card about 5usec  
+Good CISCO 10G ETHERNET VLAN switch from card port to card port about 5-6usec  
+card -> Kernel -> user-space on other side same 5usec  
+So good UDP ping-pong is about 30usec  
 Using network-traffic offload libs like Mellanox VMA for low letancy can cut not so match. Affects "User-space->kernel->card" path only. So 5 usec can become 1-2usec on each side where offload is used.  
 
 + Tested on RHel Linux 6&7, Windows (Cygwin). 
@@ -23,6 +23,8 @@ Using network-traffic offload libs like Mellanox VMA for low letancy can cut not
 + multiinstance UDP send can do 1M+ syscalls
 
 # Compille
-Is is Netbians C/C++ project but one file project. So can be compilled inplace: gcc -std=c99 -lrt main.c -o net_lat
-Code not idial. Look inside to find more answers
+Is is Netbians C/C++ project but one file project. So can be compilled inplace: gcc -std=c99 -lrt main.c -o net_lat  
+On Windows use Cygwin on MSYS2 not MinGW  
+Code not idial.  
+Look inside to find more answers.
 
