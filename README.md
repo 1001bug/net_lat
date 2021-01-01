@@ -23,7 +23,7 @@ Using network-traffic offload libs like Mellanox VMA for low letancy can cut not
 + multiinstance UDP send can do 1M+ syscalls
 
 # Compille
-Is is Netbians C/C++ project but one file project. So can be compilled inplace: gcc -std=c99 -lrt main.c -o net_lat  
+This is "NetBeans C/C++" project. But one file project. So can be compilled inplace: `gcc -std=c99 -lrt main.c -o net_lat`  
 On Windows use Cygwin on MSYS2 not MinGW  
 Code not idial.  
 Look inside to find more answers.
