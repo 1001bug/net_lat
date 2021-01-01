@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>3</platform>
+      </toolsSet>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_signals>
+        </gdb_signals>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -c tcp -I 10.10.10.1 192.168.8.180</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -s tcp 192.168.8.180</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -c tcp 192.168.8.180</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -c udp_max_throughput_prof -D 10 239.0.1.22</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}" -c udp_max_throughput_prof -D 10 239.0.1.22</runcommand>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>3</platform>
+      </toolsSet>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="Debug_linux" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>3</platform>
+      </toolsSet>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -c tcp -I 10.10.10.1 192.168.8.180</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -s tcp 192.168.8.180</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -c tcp 192.168.8.180</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -s udp_max_throughput -M 239.1.1.2</runcommandpicklistitem>
+          <runcommandpicklistitem>taskset -c 4,3 "${OUTPUT_PATH}" -s udp_max_async</runcommandpicklistitem>
+          <runcommandpicklistitem>./ "${OUTPUT_PATH}" -s udp_max_async</runcommandpicklistitem>
+          <runcommandpicklistitem>./run_ts.sh "${OUTPUT_PATH}" -s udp_max_async</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -s udp_max_async</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -c tcp 10.50.130.113</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}" -c tcp 10.50.130.113</runcommand>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>
